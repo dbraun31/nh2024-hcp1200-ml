@@ -4,6 +4,15 @@ Welcome to the [Project Name] repository! Since we are working as a team of ~ 15
 
 ## Workflow
 
+### Getting Started
+
+1. **Clone the Repository:** To begin developing for this project on your local machine, you'll need
+   to clone the repository to your local machine.
+
+```bash
+git clone git@github.com:dbraun31/nh2024-hcp1200-ml.git
+```
+
 ### Creating a New Branch
 
 
