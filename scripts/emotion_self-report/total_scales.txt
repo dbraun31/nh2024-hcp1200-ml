@@ -1,0 +1,49 @@
+Self-Report Assessments Relevant to Disordered Emotional States
+
+    Achenbach Adult Self-Report (ASR)
+        Measures a wide range of psychological problems, including anxiety, depression, and social withdrawal.
+
+    Beck Depression Inventory (BDI)
+        Assesses the severity of depressive symptoms.
+
+    Positive and Negative Affect Schedule (PANAS)
+        Measures positive and negative affect, providing an assessment of emotional states.
+
+    State-Trait Anxiety Inventory (STAI)
+        Differentiates between state anxiety (temporary condition) and trait anxiety (general tendency).
+
+    Perceived Stress Scale (PSS)
+        Evaluates the degree to which situations in one's life are appraised as stressful.
+
+    Center for Epidemiologic Studies Depression Scale (CES-D)
+        Screens for symptoms of depression in the general population.
+
+    Life Satisfaction Questionnaire (LSQ)
+        Assesses overall life satisfaction and well-being.
+
+    Big Five Inventory (BFI)
+        Measures five major dimensions of personality, including neuroticism, which is closely related to emotional instability.
+
+    Connor-Davidson Resilience Scale (CD-RISC)
+        Assesses resilience, the ability to cope with stress and adversity.
+
+    Emotional Regulation Questionnaire (ERQ)
+        Evaluates individual differences in the habitual use of two emotion regulation strategies: cognitive reappraisal and expressive suppression.
+
+    Multidimensional Personality Questionnaire (MPQ)
+        Measures a range of personality traits, including negative emotionality.
+
+    Social Interaction Anxiety Scale (SIAS)
+        Assesses anxiety related to social interactions.
+
+    Fear of Negative Evaluation Scale (FNE)
+        Measures apprehension about being negatively evaluated by others.
+
+    Brief Symptom Inventory (BSI)
+        Provides an overview of a patient’s symptoms and psychological distress, including anxiety and depression.
+
+    Penn Emotion Recognition Test (ER40)
+        Assesses the ability to recognize facial expressions of emotion.
+
+    Adult Self-Report (ASR)
+        Measures a broad range of emotional and behavioral problems.
