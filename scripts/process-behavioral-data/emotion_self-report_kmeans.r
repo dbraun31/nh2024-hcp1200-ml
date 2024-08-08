@@ -3,7 +3,7 @@ library(here)
 
 setwd(here())
 
-d <- read.csv('data/unrestricted_dbraun31_8_5_2024_16_37_47.csv')
+d <- read.csv('data/general_data/archive/behavioral_data.csv')
 
 cols <- data.frame(
     assessment = c(
@@ -60,6 +60,7 @@ colnames(cols)[colnames(cols) == 'column_header'] <- 'item'
 colnames(d) <- sapply(colnames(d), gsub, pattern = '_unadj', replacement = '')
 
 
+## KMEANS CLUSTERING
 clustering <- function(d, centers) {
     km <- kmeans(d[,2:(ncol(d))], centers = centers, nstart=20)
     return(km$tot.withinss)
@@ -68,6 +69,8 @@ clustering <- function(d, centers) {
 
 nclusters <- 10
 out <- data.frame()
+
+set.seed(122)
 
 for (clusters in 1:nclusters) {
     wss <- clustering(d[,2:(ncol(d))], centers=clusters)
