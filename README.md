@@ -1,4 +1,3 @@
-# Predicting Emotional States from Brain Data
+# Using Machine Learning to Classify Emotional States in the Human Connectome Project Dataset - Neurohackademy 2024
 
-Not much to see here yet =). See `CONTRIBUTING.md` for guidelines on how to
-contribute to this repository.
+This is the repository of the Neurohackademy 2024 Project "Using Machine Learning to Classify Emotional States in the Human Connectome Project Dataset"
