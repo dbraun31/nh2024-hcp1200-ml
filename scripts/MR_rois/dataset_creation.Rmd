@@ -1,0 +1,85 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+behavioral <- read.csv("//HCP_total_sample.csv")
+newbrain <- read.csv("/structural_neuroimaging.csv")
+
+data <- merge(behavioral, newbrain, by = "Subject", all = FALSE)
+```
+
+
+```{r}
+# Assuming your data frame is named 'data'
+
+# Reverse scoring function (assuming a scale with a mean of 50 and SD of 10)
+reverse_score <- function(x) {
+  return(100 - x)
+}
+
+data$Loneliness_Unadj <- reverse_score(data$Loneliness_Unadj)
+data$PercHostil_Unadj <- reverse_score(data$PercHostil_Unadj)
+data$PercReject_Unadj <- reverse_score(data$PercReject_Unadj)
+data$PercStress_Unadj <- reverse_score(data$PercStress_Unadj)
+
+
+
+data$avg_negaffect <- rowMeans(data[, c("AngAffect_Unadj", 
+                                        "AngHostil_Unadj", 
+                                        "AngAggr_Unadj", 
+                                        "FearAffect_Unadj", 
+                                        "FearSomat_Unadj", 
+                                        "Sadness_Unadj")], 
+                               na.rm = TRUE)
+
+# Psychological Well-being (Positive Affect, Life Satisfaction, Meaning and Purpose)
+data$avg_poswellbeing <- rowMeans(data[, c("LifeSatisf_Unadj", 
+                                           "MeanPurp_Unadj", 
+                                           "PosAffect_Unadj")], 
+                                  na.rm = TRUE)
+
+# Social Relationships (Social Support, Companionship, Social Distress, Positive Social Development)
+data$avg_socialrelationships <- rowMeans(data[, c("Friendship_Unadj", 
+                                                  "Loneliness_Unadj", 
+                                                  "PercHostil_Unadj", 
+                                                  "PercReject_Unadj", 
+                                                  "EmotSupp_Unadj", 
+                                                  "InstruSupp_Unadj")], 
+                                         na.rm = TRUE)
+
+# Stress and Self Efficacy (Perceived Stress, Self-Efficacy)
+data$avg_stress_selfefficacy <- rowMeans(data[, c("PercStress_Unadj", 
+                                                  "SelfEff_Unadj")], 
+                                         na.rm = TRUE)
+
+data$avg_negaffect_rev <- (100 - data$avg_negaffect)
+
+data$totalemonih <- rowMeans(data[, c("avg_poswellbeing", 
+                                        "avg_socialrelationships", 
+                                        "avg_stress_selfefficacy", 
+                                        "avg_negaffect_rev")], 
+                               na.rm = TRUE)
+
+```
+
+
+
+```{r}
+subset <- dplyr::select(data, Subject, Age.x,  Sex, FS_L_Amygdala_Vol, FS_R_Amygdala_Vol, Avg_Amygdala_Vol, Avg_Insula_Thck, Avg_Rostralanteriorcingulate_Thck, Avg_Rostralanteriorcingulate_Area, Avg_Medialorbitofrontal_Thck, FS_L_Medialorbitofrontal_Area,FS_R_Medialorbitofrontal_Area, Avg_Medialorbitofrontal_Area,FS_BrainSeg_Vol_No_Vent.x, ER40_CR, ER40_CRT, ER40ANG,ER40FEAR, ER40HAP,ER40NOE, ER40SAD, AngAffect_Unadj, AngHostil_Unadj, AngAggr_Unadj, FearAffect_Unadj, FearSomat_Unadj, Sadness_Unadj, LifeSatisf_Unadj, MeanPurp_Unadj, PosAffect_Unadj, Friendship_Unadj, Loneliness_Unadj, PercHostil_Unadj, PercReject_Unadj, EmotSupp_Unadj, InstruSupp_Unadj, PercStress_Unadj, SelfEff_Unadj, NEOFAC_A, NEOFAC_O, NEOFAC_C, NEOFAC_N, NEOFAC_E, avg_negaffect, avg_poswellbeing, avg_socialrelationships, avg_stress_selfefficacy, totalemonih)
+
+write.csv(subset,"./clean_strcutral_behavioral_data.csv", row.names=FALSE)
+```
+
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
