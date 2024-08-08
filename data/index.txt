@@ -1,0 +1,20 @@
+.
+├── documentation
+│   └── HCP_S1200_DataDictionary_Oct_30_2023.xlsx
+        - The data wiki
+
+├── features
+    - Where features for the ML model will go
+│   ├── dv
+        - Data to be used as the target for prediction
+│   │   └── cluster_subject_mapping.csv
+│   └── ivs
+        - Where to put features that the ML model will predict from
+
+├── general_data
+│   └── behavioral_data.csv
+        - The total behavioral data from HCP website
+
+└── index.html
+
+6 directories, 4 files
