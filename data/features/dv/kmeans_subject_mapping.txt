@@ -1,0 +1,22 @@
+The associated CSV file (kmeans_subject_mapping.csv) stores subject ID
+along with the class ID that each subject was assigned to from a KMeans
+clustering algorithm performed on the following NIH Toolkit survey items:
+
+AngAffect_Unadj
+AngHostil_Unadj
+AngAggr_Unadj
+FearAffect_Unadj
+FearSomat_Unadj
+Sadness_Unadj
+LifeSatisf_Unadj
+MeanPurp_Unadj
+PosAffect_Unadj
+Friendship_Unadj
+Loneliness_Unadj
+PercHostil_Unadj
+PercReject_Unadj
+EmotSupp_Unadj
+InstruSupp_Unadj
+PercStress_Unadj
+SelfEff_Unadj
+
