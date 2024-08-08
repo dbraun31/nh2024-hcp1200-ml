@@ -1,1 +1,6 @@
 priv/*
+.Rhistory
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
