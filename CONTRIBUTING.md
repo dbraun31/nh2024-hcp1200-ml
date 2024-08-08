@@ -1,6 +1,6 @@
-# Contributing to [Project Name]
+# Contributing to project "Using Machine Learning to Classify Emotional States in the Human Connectome Project" - Neurohackademy 2024
 
-Welcome to the [Project Name] repository! Since we are working as a team of ~ 15 collaborators, we will be pushing branches directly to the main repository and using pull requests for code reviews and integration. Please follow these guidelines to ensure a smooth and efficient workflow.
+Welcome to the "Using Machine Learning to Classify Emotional States in the Human Connectome Project" repository, part of Neurohackademy 2024! Since we are working as a team of ~ 15 collaborators, we will be pushing branches directly to the main repository and using pull requests for code reviews and integration. Please follow these guidelines to ensure a smooth and efficient workflow.
 
 ## Workflow
 
