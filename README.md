@@ -1,4 +1,14 @@
 # Using Machine Learning to Classify Emotional States in the Human Connectome Project - Neurohackademy 2024
+<div align=center>
+<a src="https://img.shields.io/badge/%F0%9F%93%96-Files-red.svg?style=flat-square" href="https://drive.google.com/drive/folders/1nwBrHzLR1EIHSUA6pEwHI3LDMY2FiI7Q?role=writer">
+<img src="https://img.shields.io/badge/%F0%9F%93%96-Files-red.svg?style=flat-square">
+</a>
+
+<a src="https://img.shields.io/badge/%F0%9F%8E%A4-Slides-blue.svg?style=flat-square" href="https://docs.google.com/presentation/d/1XuNOPoA5PbUCrv0Y8v3r3WWf204DvEbz/edit?usp=sharing">
+<img src="https://img.shields.io/badge/%F0%9F%8E%A4-Slides-blue.svg?style=flat-square">
+</a>
+
+</div>
 
 This is the repository of the Neurohackademy 2024 Project "Using Machine Learning to Classify Emotional States in the Human Connectome Project Dataset"
 
